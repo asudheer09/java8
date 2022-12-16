@@ -1,0 +1,10 @@
+Functional Interface:
+  only one abstract method + many default and static methods.
+
+Marker Interface: it is empty interface, example : Serializable, Clonable.
+
+what is multiple inheritance?
+
+A class can extend more than one class.
+is multiple inheritance supported in java?
+it supported through interfaces but not with classes.
