@@ -8,3 +8,11 @@ what is multiple inheritance?
 A class can extend more than one class.
 is multiple inheritance supported in java?
 it supported through interfaces but not with classes.
+
+
+String vs StringBuffer vs StringBuilder
+
+1. String is immutable
+2. StringBuffer and StringBuilder are mutable.
+3. String is thread safe and StringBuffer is also.
+4. StringBuilder is not ThreadSafe.
