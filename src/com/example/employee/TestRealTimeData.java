@@ -73,5 +73,19 @@ public class TestRealTimeData {
 
         Employee employee2 = employeeList.stream().sorted(Comparator.comparingLong(Employee::getYearOfJoining)).findFirst().get();
         System.out.println(employee2);
+
+        //Optional<Employee> employee2 = employeeList.stream().filter(e -> "Male".equals(e.gender) && "Product Development".equals(e.getDepartment())).min(Comparator.comparingInt(Employee::getAge));
+
+       Map<String,List<Employee>> listMap= employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.toList()));
+
+        for(Map.Entry<String,List<Employee>> entry: listMap.entrySet()) {
+            System.out.println("department :"+entry.getKey());
+            List<Employee> employeeList1= entry.getValue();
+            System.out.println("=======Employee names in the department=======");
+            for (Employee e:employeeList1) {
+                System.out.println(e.getName());
+            }
+        }
+
     }
 }
